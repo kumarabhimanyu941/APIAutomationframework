@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="API Regression Test Suite" thread-count="1" parallel ="tests" verbose ="3">
+
+		
+	<test name="fakeStrore Regression Test">
+
+    <parameter name="baseURI" value="https://fakestoreapi.com"></parameter>
+		<classes>
+			<class name="com.qa.gorest.tests.fakeStoreAPITest" />
+
+		</classes>
+	</test>
+	
+</suite> 

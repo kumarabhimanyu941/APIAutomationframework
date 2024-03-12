@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="API Regression Test Suite" thread-count="1" parallel ="tests" verbose ="3">
+
+
+    <listeners>
+		<listener
+			class-name="com.qa.gorest.Listeners.ExtentReportListener" />
+	</listeners>
+
+
+   <test name="Amadeus Regression Test_getUser">
+
+     <parameter name="baseURI" value="https://test.api.amadeus.com"></parameter>
+     <parameter name="grant_type" value="client_credentials"></parameter>
+     <parameter name="client_id" value="YH7LoemSvKHeoqtU7HVc9ExTEAJpYuHE"></parameter>
+     <parameter name="client_secret" value="jyi6Ob6GbqGUKrBv"></parameter>
+		
+		<classes>
+			<class name="com.qa.amadeus.tests.fetchFlightDetails_OAuth2" />
+        </classes>
+	</test>
+
+</suite> 
